@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Popup Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="main">
+  <div class="title">
+    <img src="./imgs/book.png" alt="img">
+    <h1>Library</h1>
+  </div>
+    <p class="greeting">Welcome to your library!</p>
+    <button id="showFormButton">Add new book</button>
+    <button id="showBooksButton">Open library</button>
+    <div class="listContainer hidden">
+        <h2 class="list-title"> Books</h2>
+        <ul id="myList" class="styled-list">
+            <li>Potato</li>
+            <li>Fruit</li>
+            <li>Apple</li>
+        </ul>
+        <button type="button" id="cancelButton2">Cancel</button>
+    </div>
+  <div id="formContainer" class="hidden">
+    <form id="myForm">
+      <label for="title">Book Title:</label>
+      <input type="text" id="title" name="title" required><br><br>
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" required><br><br>
+      <label for="pages" >Pages:</label>
+      <input type="number" min="0" id="pages" name="pages" required><br><br>
+      <label for="read">Have you read this book?</label>
+      <select id="read" name="read" required>
+        <option value="" disabled selected>status</option>
+        <option value="read">Read</option>
+        <option value="not read yet">Not read yet</option>
+      </select><br><br>
+      <button type="submit">Submit</button>
+      <button type="button" id="cancelButton">Cancel</button>
+    </form>
+  </div>
+
+</div>    
+    
+  <script src="app.js"></script>
+</body>
+
+</html>
